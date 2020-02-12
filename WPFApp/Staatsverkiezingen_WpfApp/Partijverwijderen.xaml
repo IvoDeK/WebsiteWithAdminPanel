@@ -1,0 +1,25 @@
+﻿<Window x:Class="Staatsverkiezingen_WpfApp.Partijverwijderen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Staatsverkiezingen_WpfApp"
+        mc:Ignorable="d"
+        Title="Partij" Height="450" Width="800" FontSize="20" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Margin="10,10,10,290" Height="120" Background="#2296cc">
+            <TextBlock TextAlignment="Center" FontSize="50" Text="Partij verwijderen" Foreground="White"/>
+            <Button Name="Back" Height="32" Width="300" Content="Terug" Click="Back_Click"/>
+        </StackPanel>
+        <StackPanel Margin="50,130,50,0" Orientation="Horizontal">
+            <StackPanel Margin="10" Width="200">
+                <TextBlock TextAlignment="Center" Text="Partijen:"/>
+                <ListBox Margin="10" Height="215" Name="partijen" SelectionChanged="Partijen_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Margin="10" Width="450">
+                <Button Margin="10,125" Height="30" Content="Verwijderen" Name="btnDel" IsEnabled="False" Click="BtnDel_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <Image HorizontalAlignment="Left" Height="100" Margin="670,15,0,0" VerticalAlignment="Top" Width="100" Name="iPfoto"/>
+    </Grid>
+</Window>

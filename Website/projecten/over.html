@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Staatsverkiezingen | Over</title>
+  </head>
+  <body>
+    <header>
+    <div class="container">
+      <div id="logo">
+        <h1>Staatsverkiezingen</h1>
+      </div>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="verkiezingen.html">Verkiezingen</a></li>
+            <li><a href="partij.php">Partijen</a></li>
+            <li class="current"><a href="over.html">Over</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+      <div class="container">
+        <p class="InfoTekst">
+          Deze website is bedoeld om jullie als consument wat meer te informeren over de partijen. Ook om jullie een beter beeld te geven wat de standpunten zijn van de partijen die mee doen. Hieruit krijgt U een beter overzicht op welke partij u misschien kunt gaan stemmen.
+          <br>
+          <br>
+          Het is een non-profit website en is dus echt bedoeld om uw de beste informatie te geven en niet om u te laten stemmen op een bepaalde partij. Mochten er vragen zijn met betrekking tot een bepaalde partij ga dan naar het contact formulier en vul de gegevens in.
+        </p>
+      </div>
+
+    <section class="Contact">
+      <div class="container">
+        <h1>info@staatsverkiezingen.com</h1>
+        <form>
+          <h2>Klik <a href="contact.php">Hier</a> om contact op te nemen</h2>
+        </form>
+      </div>
+    </section>
+
+    <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="./afb/ps.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./afb/stembus.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./afb/stemburo.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+    <footer>
+      <p>Staatsverkiezingen, Copyright &copy; 2019</p>
+    </footer>
+  </body>
+</html>
